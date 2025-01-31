@@ -1,0 +1,196 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    gap: 10px;
+    background-color: rgb(38, 38, 38);
+    font-family: "Roboto Mono", serif;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+
+.divHeaderContainer {
+    margin-left: 32px;
+    width: 11%;
+}
+
+.spanTxt {
+    color: rgb(21, 148, 21);
+}
+
+.divCarouselContainer {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.divH3Container {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-left: 32px;
+    height: fit-content;
+    font-size: medium;
+}
+
+.divTechContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-left: 20px;
+
+    >div {
+        margin-top: 40px;
+        flex: 0 0 120px;
+        border-radius: 0.5rem;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        box-shadow: 1px 5px 15px rgb(11, 83, 11);
+        position: relative;
+        overflow: hidden;
+
+        .content {
+            font-size: 1.5rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            opacity: 0;
+            flex-direction: column;
+            height: 100%;
+            justify-content: flex-end;
+            background: rgb(2, 2, 46);
+            background: linear-gradient(0deg,
+                    rgba(2, 2, 46, 0.6755077030812324) 0%,
+                    rgba(255, 255, 255, 0) 100%);
+            transform: translatey(100%);
+            transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+            visibility: hidden;
+
+            span {
+                display: block;
+                margin-top: 5px;
+                font-size: 1.2rem;
+            }
+        }
+
+        &:hover {
+            flex: 0 0 250px;
+            box-shadow: 1px 3px 15px rgb(21, 148, 21);
+            transform: translatey(-30px);
+        }
+
+        &:hover .content {
+            opacity: 1;
+            transform: translatey(0%);
+            visibility: visible;
+        }
+    }
+
+    .divFrontChild {
+        &:nth-of-type(1) {
+            background: url("https://www.svgrepo.com/show/353396/angular-icon.svg") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(2) {
+            background: url("https://static-00.iconduck.com/assets.00/react-icon-1024x1024-wwxwlds8.png") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(3) {
+            background: url("https://www.svgrepo.com/show/349419/javascript.svg") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(4) {
+            background: url("https://www.svgrepo.com/show/349540/typescript.svg") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(5) {
+            background: url("https://www.svgrepo.com/show/452228/html-5.svg") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(6) {
+            background: url("https://www.svgrepo.com/show/452185/css-3.svg") no-repeat 50% / cover;
+            height: 150px;
+        }
+    }
+
+    .divBackChild {
+        &:nth-of-type(1) {
+            background: url("https://setecompu.com/wp-content/uploads/2018/07/C-Sharp.png") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(2) {
+            background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1024px-.NET_Core_Logo.svg.png") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(3) {
+            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWY6XG3t94PxBtbOoXYCN9yte4qAiyQwjYA4sABvaqSUehBVvKrsyyS0-NY0g_arraH6A&usqp=CAU") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(4) {
+            background: url("https://www.svgrepo.com/show/354420/swagger.svg") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(5) {
+            background: url("https://www.svgrepo.com/show/354202/postman-icon.svg") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(6) {
+            background: url("https://pnghq.com/wp-content/uploads/pnghq.com-sql-server-download-png-w-3-334x350.png") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(7) {
+            background: url("https://www.sovereignconsult.com/wp-content/uploads/2020/03/RestApi.png") no-repeat 50% / cover;
+            height: 150px;
+        }
+    }
+
+    .divOthersChild {
+        &:nth-of-type(1) {
+            background: url("https://cdn-icons-png.flaticon.com/512/25/25231.png") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(2) {
+            background: url("https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(3) {
+            background: url("https://miro.medium.com/v2/resize:fit:400/0*KpzqUReoWU_DEwb5.png") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(4) {
+            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrb84R83l6mWa_fhIj47sctMrcrCyoJpYDGg&s") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(5) {
+            background: url("https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png") no-repeat 50% / cover;
+            height: 150px;
+        }
+
+        &:nth-of-type(6) {
+            background: url("https://cdn.iconscout.com/icon/free/png-256/free-azure-logo-icon-download-in-svg-png-gif-file-formats--microsoft-destination-brand-logos-pack-icons-1583129.png?f=webp&w=256") no-repeat 50% / cover;
+            height: 150px;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    background-image: url('https://wallpapercave.com/wp/wp4854160.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.divLeftContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 61%;
+    margin-left: 32px;
+    justify-content: space-around;
+}
+
+.divTxtContainer {
+    font-family: "Roboto Mono", serif;
+    font-weight: bold;
+    color: white;
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #139313;
+    color: ghostwhite;
+}
+
+button span {
+    font-family: "Roboto Mono", serif;
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+}
+
+button:hover span {
+    color: black;
+}
+
+button::before,
+button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+button::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+button:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+.divRightContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.divRightContainer img {
+    width: 313px;
+    height: 399px;
+    display: flex;
+    position: relative;
+}

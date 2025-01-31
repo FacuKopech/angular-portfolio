@@ -39,3 +39,9 @@
 .spanTxt{
     color: rgb(21, 148, 21);
 }
+
+@media (max-width: 430px) {
+    .spacer{
+        width: 2%;
+    }
+}

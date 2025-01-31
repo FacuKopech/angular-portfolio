@@ -8,8 +8,7 @@
     background-color: rgb(38, 38, 38);
     font-family: "Roboto Mono", serif;
     font-weight: bold;
-    color: white;
-    border-bottom: 1px solid rgb(45, 45, 45);
+    color: white;    
     padding-bottom: 20px;
     border-radius: 20px;
 }
@@ -20,15 +19,16 @@
 .divCardsContainer {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;  
+    flex-wrap: wrap;
+    align-items: center;  
 }
 
 .divCards {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: space-evenly;
@@ -288,9 +288,16 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
     .back .inner p{
         font-size: 11px;
+    }
+
+    .divCards{
+        width: 98%;
+    }
+    .divCard{
+        width: 21%;
     }
 }
 

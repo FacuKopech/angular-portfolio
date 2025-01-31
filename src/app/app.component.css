@@ -45,6 +45,7 @@
     position: relative;
     padding: 50px 20px;
     background: #1a1a1a;
+    border: 0px solid transparent;
 }
 
 .section::after {

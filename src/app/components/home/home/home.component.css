@@ -13,9 +13,13 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    width: 61%;
+    width: 150%;
     margin-left: 32px;
     justify-content: space-around;
+}
+
+.divCVBtnContainer{
+    padding-bottom: 4px;
 }
 
 .divTxtContainer {
@@ -81,14 +85,20 @@ button:hover::before {
 
 .divRightContainer {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .divRightContainer img {
-    width: 313px;
-    height: 399px;
+    width: 100%;
+    height: auto;
     display: flex;
     position: relative;
+}
+
+@media (max-width: 500px) {
+    .divLeftContainer{
+        margin-left: 16px;
+    }
 }

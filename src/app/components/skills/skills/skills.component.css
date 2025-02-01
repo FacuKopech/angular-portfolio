@@ -15,7 +15,6 @@
 
 .divHeaderContainer {
     margin-left: 32px;
-    width: 11%;
 }
 
 .spanTxt {
@@ -25,7 +24,8 @@
 .divCarouselContainer {
     display: flex;
     flex-direction: row;
-    width: 90%;
+    flex-wrap: wrap;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -41,11 +41,13 @@
 .divTechContainer {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-around;
     margin-left: 20px;
 
     >div {
+        margin-left: 35px;
         margin-top: 40px;
         flex: 0 0 120px;
         border-radius: 0.5rem;
@@ -56,7 +58,7 @@
         overflow: hidden;
 
         .content {
-            font-size: 1.5rem;
+            font-size: medium;
             color: #fff;
             display: flex;
             align-items: center;
@@ -81,7 +83,7 @@
         }
 
         &:hover {
-            flex: 0 0 250px;
+            flex: 0 0 150px;
             box-shadow: 1px 3px 15px rgb(21, 148, 21);
             transform: translatey(-30px);
         }
@@ -192,5 +194,15 @@
             background: url("https://cdn.iconscout.com/icon/free/png-256/free-azure-logo-icon-download-in-svg-png-gif-file-formats--microsoft-destination-brand-logos-pack-icons-1583129.png?f=webp&w=256") no-repeat 50% / cover;
             height: 150px;
         }
+    }
+}
+
+@media (max-width: 1250px) {
+
+    .divTechContainer .divFrontChild,
+    .divTechContainer .divBackChild,
+    .divTechContainer .divOthersChild {
+
+        height: calc(4vh + 39px);
     }
 }

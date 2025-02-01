@@ -1,7 +1,7 @@
 .container {
     display: flex;
     width: 100%;
-    height: 500px;
+    height: fit-content;
     background-color: rgb(38, 38, 38);
     background-position: center;
     background-repeat: no-repeat;
@@ -9,7 +9,8 @@
     padding-bottom: 20px;
     border-radius: 20px;
 }
-.divImgsContainer{
+
+.divImgsContainer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -19,29 +20,67 @@
     margin-left: 32px;
     margin-top: 5px;
 }
-.divImgsContainer img{
+
+.divImgsContainer img {
     width: 160px;
     height: 160px;
+    margin-bottom: 12px;
 }
 
-.spacer{
-    width: 15%;
+.spacer {
+    width: 20%;
 }
+
 .divTxtContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     font-family: "Roboto Mono", serif;
     font-weight: 400;
     font-size: small;
     color: white;
     margin: 5px 0;
-    line-height: 1.4;
 }
 
-.spanTxt{
+.divTxtContainer p{
+    line-height: 2.5rem;
+    margin-top: 0;
+    margin-right: 12px;
+}
+
+.spanTxt {
     color: rgb(21, 148, 21);
 }
 
-@media (max-width: 430px) {
-    .spacer{
-        width: 2%;
+@media (max-width: 1460px) {
+    .spacer {
+        display: none;
     }
+
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .divImgsContainer {
+        flex-direction: row;
+    }
+
+    .divImgsContainer img {
+        margin-top: 10px;
+    }
+
+    .divTxtContainer {
+        margin-left: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        /* Allows wrapping on smaller screens */
+        gap: 10px;
+    }
+
+    .divTxtContainer p {
+        flex: 1; /* Makes each paragraph take equal width */
+        min-width: 200px; /* Prevents paragraphs from getting too small */
+      }
+
+
 }

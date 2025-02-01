@@ -8,20 +8,21 @@
     background-color: rgb(38, 38, 38);
     font-family: "Roboto Mono", serif;
     font-weight: bold;
-    color: white;    
+    color: white;
     padding-bottom: 20px;
     border-radius: 20px;
 }
-.divTitleContainer{
+
+.divTitleContainer {
     margin-left: 32px;
 }
 
 .divCardsContainer {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;  
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    align-items: center;  
+    align-items: center;
 }
 
 .divCards {
@@ -38,10 +39,12 @@
 .divCard {
     width: 17%;
     cursor: pointer;
-    height: 384px;
+    height: calc(30vh + 66px);
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
-.movieTheaterCard{
+.movieTheaterCard {
     margin-bottom: 4px;
 }
 
@@ -128,14 +131,39 @@
     z-index: 2;
 }
 
-.divStackIcons{
+.inner p{
+    margin-bottom: 0;
+    justify-content: center;
+}
+
+.divAnchorsContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.divAnchor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.divAnchor a{
+    margin-right: 2px;
+}
+.divAnchor p{
+    margin: 0;
+    align-self: center;
+}
+
+.divStackIcons {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 12px;
     flex-wrap: wrap;
 }
-.divStackIcons img{
+
+.divStackIcons img {
     width: 26px;
     height: 26px;
 }
@@ -187,16 +215,22 @@
     bottom: -.75rem;
 }
 
+.back .inner p {
+    font-family: "Roboto Mono", serif;
 
-.back .inner hr{
+}
+
+.back .inner hr {
     width: 90%;
     border: 2px solid rgba(220, 220, 220, 0.726);
     border-radius: 20px;
 }
 
-.back .inner a{
+.back .inner a {
     color: #fff;
     text-decoration: underline;
+    font-family: "Roboto Mono", serif;
+
 }
 
 #source-link {
@@ -250,79 +284,36 @@
     transition: color 600ms;
 }
 
-@media screen and (max-width: 1500px) {
-    .back .inner p{
+@media screen and (max-width: 2300px) {
+    .back .inner p {
         font-size: 12px;
     }
 }
-@media screen and (max-width: 1300px) {
-    .divCard {
-        width: 100%;
-        margin: 0 0 2rem 0;
-    }
-    .back .inner p{
-        font-size: 15.2px;
-    }
-}
-@media screen and (max-width: 600px) and (min-width: 500px) {
 
-    .back .inner p{
-        font-size: 14.2px;
-    }
-}
-@media (max-width: 700px) {
+@media screen and (max-width: 1470px) {
 
-    .divCardsContainer{
-        margin: 0;
-    }
-}
-@media (max-width: 500px) {
-    .divContainer {
-        margin: 3rem auto;
-    }
-    .divTitleProjects{
-        width: 28%;
-    }
-    .back .inner p{
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 430px) {
-    .back .inner p{
-        font-size: 11px;
-    }
-
-    .divCards{
-        width: 98%;
-    }
-    .divCard{
-        width: 21%;
-    }
-}
-
-@media (max-width: 300px) {
-    .back .inner p{
-        font-size: 10px;
-    }
-}
-
-@media (max-width: 360px) {
-
-    .divTitleProjects{
+    .back .inner p {
         display: flex;
-        justify-content: flex-end;
-        
+        flex-wrap: wrap;
+        font-size: 10.5px;
     }
 
-    .divTitleProjects h2{
-        transform: rotate(270deg);
-        height: fit-content;
-        margin-top: 50px;
+    .divCard {
+        width: calc(17vh + 58px);
     }
-
 }
 
-.spanTxt{
+@media screen and (max-width: 430px) {
+
+    .back .inner hr {
+        border: 1px solid rgba(220, 220, 220, 0.726);
+    }
+
+    .divCard {
+        width: calc(17vh + 58px);
+    }
+}
+
+.spanTxt {
     color: rgb(21, 148, 21);
 }

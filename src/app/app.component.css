@@ -49,6 +49,96 @@
     color: rgb(21, 148, 21);
 }
 
+.off-screen-menu {
+    background-color: #1a1a1ad1;
+    height: 100vh;
+    width: 100%;
+    max-width: 175px;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+}
+
+.off-screen-menu ul {
+    margin: 0;
+    font-size: large;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: "Roboto Mono", serif;
+    margin-top: 100px;
+    height: 130px;
+    max-height: 130px;
+    justify-content: space-between;
+}
+
+.off-screen-menu ul li:hover {
+    color: rgb(21, 148, 21);
+}
+
+.off-screen-menu.active {
+    right: 0;
+    z-index: 999;
+    height: 100%;
+}
+
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+
+.ham-menu span {
+    height: 5px;
+    width: 85%;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+    margin: 0;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+    background-color: rgb(21, 148, 21);
+}
+
+.ham-menu span:nth-child(2) {
+    background-color: #7a7a7a;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+    background-color: rgb(21, 148, 21);
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -183,8 +273,8 @@ footer {
     visibility: visible;
 }
 
-@media (max-width: 500px) {
-    .toolbar{
+@media (max-width: 960px) {
+    .toolbar {
         justify-content: space-between;
     }
 
@@ -192,11 +282,22 @@ footer {
         display: none;
     }
 
-    .toolbar .divBtnsContainer{
+    .toolbar .divBtnsContainer {
         width: 60%;
     }
 
     .section {
         padding: 30px 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .toolbar .divBtnsContainer {
+        display: none;
+    }
+
+    .ham-menu {
+        display: flex;
+        margin-right: 10px;
     }
 }

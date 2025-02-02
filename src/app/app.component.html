@@ -15,6 +15,19 @@
       <button (click)="scrollTo('portfolio')">Portfolio</button>
     </div>
   </div>
+  <div class="off-screen-menu" #offScreenMenu>
+    <ul>
+      <li (click)="scrollTo('home')">Home</li>
+      <li (click)="scrollTo('about')">About</li>
+      <li (click)="scrollTo('skills')">Skills</li>
+      <li (click)="scrollTo('portfolio')">Portfolio</li>
+    </ul>
+  </div>
+  <div class="ham-menu" #hamMenu>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </div>
 
 <div class="content" role="main">

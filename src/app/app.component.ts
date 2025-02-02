@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,16 @@ import { Component, HostListener } from '@angular/core';
 export class AppComponent {
   title = 'angular-portfolio';
   showButton = false;
+  @ViewChild('hamMenu') hamMenu?: ElementRef;
+  @ViewChild('offScreenMenu') offScreenMenu?: ElementRef;
+
+  ngAfterViewInit() {
+    this.hamMenu?.nativeElement.addEventListener('click', () => {
+      console.log(this.hamMenu);
+      this.hamMenu?.nativeElement.classList.toggle('active');
+      this.offScreenMenu?.nativeElement.classList.toggle('active');
+    });
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -22,6 +32,8 @@ export class AppComponent {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.hamMenu?.nativeElement.classList.remove('active');
+      this.offScreenMenu?.nativeElement.classList.remove('active');
     }
   }
 }

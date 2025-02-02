@@ -101,4 +101,14 @@ button:hover::before {
     .divLeftContainer{
         margin-left: 16px;
     }
+
+    .container{
+        max-width: 460px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .container{
+        max-width: 890px;
+    }
 }

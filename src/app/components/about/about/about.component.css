@@ -42,7 +42,7 @@
     margin: 5px 0;
 }
 
-.divTxtContainer p{
+.divTxtContainer p {
     line-height: 2.5rem;
     margin-top: 0;
     margin-right: 12px;
@@ -78,9 +78,22 @@
     }
 
     .divTxtContainer p {
-        flex: 1; /* Makes each paragraph take equal width */
-        min-width: 200px; /* Prevents paragraphs from getting too small */
-      }
+        flex: 1;
+        /* Makes each paragraph take equal width */
+        min-width: 200px;
+        /* Prevents paragraphs from getting too small */
+    }
+}
 
+@media (max-width: 500px) {
+   
+    .container{
+        max-width: 460px;
+    }
+}
 
+@media (max-width: 1260px) {
+    .container{
+        max-width: 890px;
+    }
 }

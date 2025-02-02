@@ -131,7 +131,7 @@
     z-index: 2;
 }
 
-.inner p{
+.inner p {
     margin-bottom: 0;
     justify-content: center;
 }
@@ -147,10 +147,12 @@
     flex-direction: row;
     justify-content: center;
 }
-.divAnchor a{
+
+.divAnchor a {
     margin-right: 2px;
 }
-.divAnchor p{
+
+.divAnchor p {
     margin: 0;
     align-self: center;
 }
@@ -300,6 +302,19 @@
 
     .divCard {
         width: calc(17vh + 58px);
+    }
+}
+
+@media (max-width: 1260px) {
+    .container {
+        max-width: 890px;
+    }
+}
+
+@media (max-width: 500px) {
+   
+    .container{
+        max-width: 460px;
     }
 }
 

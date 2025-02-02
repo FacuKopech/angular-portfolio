@@ -152,7 +152,7 @@
     align-items: center;
     align-self: center;
     position: relative;
-    padding: 50px 20px;
+    padding: 50px 0px;
     background: #1a1a1a;
     border: 0px solid transparent;
     max-width: 1200px;
@@ -170,6 +170,7 @@
 
 .component {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     width: calc(89vw + 90px);
 }
@@ -184,12 +185,13 @@ footer {
     color: white;
     font-weight: 600;
     max-height: 123px;
+    width: auto;
 }
 
 .divTxtContainer {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: fit-content;
     font-family: "Roboto Mono", serif;
 }
 
@@ -202,7 +204,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100%;
+    width: 60%;
 }
 
 .social {
@@ -273,22 +275,41 @@ footer {
     visibility: visible;
 }
 
-@media (max-width: 960px) {
-    .toolbar {
-        justify-content: space-between;
-    }
-
+@media (max-width: 1100px) {
     .spacer {
         display: none;
+    }
+
+    .toolbar {
+        justify-content: space-between;
     }
 
     .toolbar .divBtnsContainer {
         width: 60%;
     }
+    
+}
+
+@media (max-width: 970px) {
+    .component {
+        max-width: 760px;
+    }
+}
+
+@media (max-width: 760px) {
+    .component {
+        max-width: 430px;
+    }
+}
+
+@media (max-width: 960px) {
+   
 
     .section {
-        padding: 30px 10px;
+        padding: 20px 0px;
     }
+
+
 }
 
 @media (max-width: 500px) {

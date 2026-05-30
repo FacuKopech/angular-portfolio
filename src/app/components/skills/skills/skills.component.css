@@ -102,7 +102,7 @@
         }
 
         &:nth-of-type(2) {
-            background: url("https://static-00.iconduck.com/assets.00/react-icon-1024x1024-wwxwlds8.png") no-repeat 50% / cover;
+            background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png") no-repeat 50% / cover;
             height: 150px;
         }
 
@@ -134,7 +134,7 @@
         }
 
         &:nth-of-type(2) {
-            background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1024px-.NET_Core_Logo.svg.png") no-repeat 50% / cover;
+            background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/3840px-.NET_Core_Logo.svg.png") no-repeat 50% / cover;
             height: 150px;
         }
 
@@ -154,7 +154,7 @@
         }
 
         &:nth-of-type(6) {
-            background: url("https://pnghq.com/wp-content/uploads/pnghq.com-sql-server-download-png-w-3-334x350.png") no-repeat 50% / cover;
+            background: url("https://www.svgrepo.com/show/331760/sql-database-generic.svg") no-repeat 50% / cover;
             height: 150px;
         }
 
